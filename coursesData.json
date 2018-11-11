@@ -1,0 +1,62 @@
+[
+  {
+    "nombre": "Fisica de campos",
+    "programa": 873484
+  },
+  {
+    "nombre": "Fisica termica",
+    "programa": 318980
+  },
+  {
+    "nombre": "Analisis y diseño de sistemas 1",
+    "programa": 744707
+  },
+  {
+    "nombre": "Fisica de ondas",
+    "programa": 467593
+  },
+  {
+    "nombre": "Analisis y diseño de sistemas 2",
+    "programa": 582447
+  },
+  {
+    "nombre": "Logica y representación 1",
+    "programa": 453188
+  },
+  {
+    "nombre": "Logica y representación 2",
+    "programa": 860097
+  },
+  {
+    "nombre": "Fisica mecanica",
+    "programa": 333288
+  },
+  {
+    "nombre": "Logica y representación 3",
+    "programa": 451869
+  },
+  {
+    "nombre": "Estadistica 1",
+    "programa": 941766
+  },
+  {
+    "nombre": "Estadistica 2",
+    "programa": 371355
+  },
+  {
+    "nombre": "Matematicas discretas 1",
+    "programa": 762020
+  },
+  {
+    "nombre": "Matematicas discretas 2",
+    "programa": 160989
+  },
+  {
+    "nombre": "Matematicas discretas 3",
+    "programa": 680331
+  },
+  {
+    "nombre": "Aprendiendo la fisica",
+    "programa": 525230
+  }
+]

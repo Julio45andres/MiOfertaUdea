@@ -1,0 +1,92 @@
+[
+  {
+    "cedula": "5592810",
+    "programa": 873484,
+    "version": 8,
+    "semestre": 3
+  },
+  {
+    "cedula": "6646890",
+    "programa": 318980,
+    "version": 6,
+    "semestre": 8
+  },
+  {
+    "cedula": "3890441",
+    "programa": 744707,
+    "version": 10,
+    "semestre": 5
+  },
+  {
+    "cedula": "6366581",
+    "programa": 467593,
+    "version": 10,
+    "semestre": 2
+  },
+  {
+    "cedula": "2671648",
+    "programa": 582447,
+    "version": 9,
+    "semestre": 2
+  },
+  {
+    "cedula": "1416156",
+    "programa": 453188,
+    "version": 2,
+    "semestre": 5
+  },
+  {
+    "cedula": "3874685",
+    "programa": 860097,
+    "version": 7,
+    "semestre": 3
+  },
+  {
+    "cedula": "7837834",
+    "programa": 333288,
+    "version": 5,
+    "semestre": 7
+  },
+  {
+    "cedula": "7560859",
+    "programa": 451869,
+    "version": 5,
+    "semestre": 3
+  },
+  {
+    "cedula": "7586441",
+    "programa": 941766,
+    "version": 9,
+    "semestre": 9
+  },
+  {
+    "cedula": "675726",
+    "programa": 371355,
+    "version": 1,
+    "semestre": 5
+  },
+  {
+    "cedula": "5523497",
+    "programa": 762020,
+    "version": 3,
+    "semestre": 7
+  },
+  {
+    "cedula": "5429150",
+    "programa": 160989,
+    "version": 1,
+    "semestre": 10
+  },
+  {
+    "cedula": "3840148",
+    "programa": 680331,
+    "version": 2,
+    "semestre": 1
+  },
+  {
+    "cedula": "4018292",
+    "programa": 525230,
+    "version": 3,
+    "semestre": 3
+  }
+]
