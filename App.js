@@ -6,9 +6,12 @@ import {
   View,
   Button,
   Alert,
-  Text
+  Text,
+  TextInput,
+  Image
 } from "react-native";
-import { createStackNavigator } from "react-navigation";
+import { createStackNavigator, createDrawerNavigator } from "react-navigation";
+import AcercaDe from "./AcercaDe.js";
 
 export default class App extends React.Component {
   render() {
@@ -99,28 +102,47 @@ class DetailsScreen extends React.Component {
   }
   render() {
     return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Mi Oferta Udea!</Text>
+      <View style={styles.home}>
+        <Image source={require("./assets/udea.png")} />
+        <Text style={styles.title}>Mi Oferta Udea!</Text>
+        <View style={styles.inputContainer}>
+          <Image source={require("./assets/user.png")} />
+          <TextInput
+            placeholder="Nombre de usuario"
+            style={{ paddingLeft: 5 }}
+          />
+        </View>
+        <View style={styles.inputContainer}>
+          <Image source={require("./assets/lock.png")} />
+          <TextInput placeholder="Contraseña" style={{ paddingLeft: 5 }} />
+        </View>
         <Button
           title="Ingresar"
-          onPress={() => this.state.navigation.navigate("Offer")}
+          onPress={() => this.state.navigation.navigate("Oferta")}
         />
       </View>
     );
   }
 }
 
-const RootStack = createStackNavigator(
+const RootStack = createDrawerNavigator(
   {
-    Offer: Offer,
-    Login: DetailsScreen
+    Home: DetailsScreen,
+    Oferta: Offer,
+    "Acerca De": AcercaDe
   },
   {
-    initialRouteName: "Login"
+    initialRouteName: "Home",
+    headerMode: "float"
   }
 );
 
 const styles = StyleSheet.create({
+  home: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
+  },
   container: {
     flex: 1,
     justifyContent: "center"
@@ -128,9 +150,24 @@ const styles = StyleSheet.create({
   buttonContainer: {
     margin: 20
   },
+  title: {
+    fontSize: 24,
+    height: 44
+  },
   item: {
     padding: 10,
     fontSize: 18,
     height: 44
+  },
+  inputContainer: {
+    borderBottomColor: "#F5FCFF",
+    backgroundColor: "#FFFFFF",
+    borderRadius: 30,
+    borderBottomWidth: 1,
+    width: 250,
+    height: 45,
+    marginBottom: 20,
+    flexDirection: "row",
+    alignItems: "center"
   }
 });
