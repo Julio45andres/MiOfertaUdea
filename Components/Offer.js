@@ -8,6 +8,14 @@ export default class Offer extends React.Component {
     this.state = {
       offerData: [],
       coursesData: [],
+      courseInfo: {
+        // grupo: "",
+        // cupomaximo: "",
+        // cupodisponible: "",
+        // aulas: "",
+        // profesores: ""
+      },
+      courseInfoIsLoading: true,
       isLoading: true,
       navigation: this.props.navigation
     };
@@ -49,16 +57,44 @@ export default class Offer extends React.Component {
           }
           //ItemSeparatorComponent={this.renderSeparator}
         />
+        <Button
+          title={
+            "Tanda: " + 9 + "\n" + "Fecha: 11/02/2019" + "\n" + "Hora: 02:00 pm"
+          }
+          onPress={() => {}}
+        />
       </View>
     );
   }
 
-  _onPressButton(programa) {
-    // this.state.coursesData
-    //   .filter(({ course }) => course.programa.toString() == programa.toString())
-    //   .map(({ course }) => {
-    //     Alert.alert("Info del curso " + course.nombre);
-    //   }, this);
-    Alert.alert("Codigo del programa: " + programa);
+  async _onPressButton(programa) {
+    const courseResponse = await fetch(
+      `https://miofertaudeapi2.herokuapp.com/courses/${programa}`
+    );
+    const courseJson = await courseResponse.json();
+    this.setState({
+      courseInfo: courseJson
+    });
+    Alert.alert(
+      "Información del curso",
+      // Mensaje
+      "Codigo del programa: " +
+        courseJson.grupo +
+        "\n" +
+        "Cupo máximo: " +
+        courseJson.cupomaximo +
+        "\n" +
+        "Cupo disponible: " +
+        courseJson.cupodisponible +
+        "\n" +
+        "Aula: " +
+        courseJson.aulas +
+        "\n" +
+        "Profesores: " +
+        courseJson.profesores
+    );
+    this.setState({
+      courseInfo: {}
+    });
   }
 }
